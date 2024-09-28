@@ -119,9 +119,10 @@ button {
   justify-content: center;
 }
 
-.pdemo{
-  animation: blink 1s step-end infinite;
-}
+.pdemo {
+  position: relative;
+  animation: none;
+  }
 
 @keyframes blink {
   0%, 100% {
@@ -130,6 +131,11 @@ button {
   50% {
       opacity: 0;
   }
+}
+
+.no-blink::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
 }
 
 
